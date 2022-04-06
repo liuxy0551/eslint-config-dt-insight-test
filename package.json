@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint && tape test/*.js"
+    "test": "tape test/*.js"
   },
   "keywords": [
     "code style",
@@ -40,6 +40,7 @@
     "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-sort-requires": "^2.1.0",
     "eslint-plugin-standard": "^5.0.0",
-    "tape": "^5.5.2"
+    "tape": "^5.5.2",
+    "typescript": "3.8.2"
   }
 }
