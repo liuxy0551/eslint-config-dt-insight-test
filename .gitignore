@@ -5,5 +5,5 @@ node_modules/
 npm-error.log
 npm-debug.log
 yarn-error.log
-yarn-lock.log
+yarn.lock
 package-lock.json
