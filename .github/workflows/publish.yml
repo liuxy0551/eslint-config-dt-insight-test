@@ -8,7 +8,7 @@ on:
 
 jobs:
   publish-to-npm:
-  needs: CI
+    needs: CI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
