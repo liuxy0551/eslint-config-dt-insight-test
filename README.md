@@ -1,12 +1,12 @@
-# [eslint-config-dt-insight]([homepage-url]) [![CI][ci-image]][ci-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
+# [eslint-config-dt-insight-test]([homepage-url]) [![CI][ci-image]][ci-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
 
-[ci-image]: https://github.com/DTStack/eslint-config-dt-insight/actions/workflows/ci.yml/badge.svg?branch=master
-[ci-url]: https://github.com/DTStack/eslint-config-dt-insight/actions/workflows/ci.yml
-[npm-image]: https://img.shields.io/npm/v/eslint-config-dt-insight.svg
-[npm-url]: https://npmjs.org/package/eslint-config-dt-insight
-[downloads-image]: https://img.shields.io/npm/dm/eslint-config-dt-insight.svg
-[downloads-url]: https://npmjs.org/package/eslint-config-dt-insight
-[homepage-url]: https://github.com/DTStack/eslint-config-dt-insight
+[ci-image]: https://github.com/DTStack/eslint-config-dt-insight-test/actions/workflows/ci.yml/badge.svg?branch=master
+[ci-url]: https://github.com/DTStack/eslint-config-dt-insight-test/actions/workflows/ci.yml
+[npm-image]: https://img.shields.io/npm/v/eslint-config-dt-insight-test.svg
+[npm-url]: https://npmjs.org/package/eslint-config-dt-insight-test
+[downloads-image]: https://img.shields.io/npm/dm/eslint-config-dt-insight-test.svg
+[downloads-url]: https://npmjs.org/package/eslint-config-dt-insight-test
+[homepage-url]: https://github.com/DTStack/eslint-config-dt-insight-test
 
 English | [中文](./README_CN.md)
 
@@ -15,7 +15,7 @@ English | [中文](./README_CN.md)
 ## Install
 
 ``` bash
-yarn add eslint-config-dt-insight -D
+yarn add eslint-config-dt-insight-test -D
 ```
 
 ## Usage
