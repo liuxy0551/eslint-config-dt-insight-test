@@ -33,15 +33,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 12
+          registry-url: https://registry.npmjs.org/
 
       - name: install dependencies
         run: npm install
 
-      - name: npm registry init
-        run: |
-          npm config set registry https://registry.npmjs.org/
-          npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-          npm whoami
-
       - name: publish packages
         run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
