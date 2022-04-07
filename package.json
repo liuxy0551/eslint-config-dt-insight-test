@@ -24,12 +24,15 @@
   "homepage": "https://github.com/liuxy0551/eslint-config-dt-insight-test",
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "eslint": "^7.0.0",
+    "tape": "^5.5.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/eslint-parser": "^7.17.0",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
-    "eslint": "^7.0.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.1.3",
@@ -39,7 +42,6 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-sort-requires": "^2.1.0",
-    "tape": "^5.5.2",
     "typescript": "3.8.2"
   }
 }
