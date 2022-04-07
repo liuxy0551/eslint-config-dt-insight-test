@@ -1,4 +1,5 @@
 const config = require('../')
+// eslint-disable-next-line import/no-extraneous-dependencies
 const test = require('tape')
 
 test('test basic properties of config', function (t) {
