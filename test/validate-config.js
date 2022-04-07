@@ -1,4 +1,6 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { ESLint } = require('eslint')
+// eslint-disable-next-line import/no-extraneous-dependencies
 const test = require('tape')
 
 test('load config in eslint to validate all rule syntax is correct', async function (t) {
