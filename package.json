@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-dt-insight-test",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "an eslint shareable config for dt-insight",
   "main": "index.js",
   "scripts": {
@@ -43,5 +43,10 @@
     "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-sort-requires": "^2.1.0",
     "typescript": "3.8.2"
+  },
+  "peerDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "tape": "^5.5.2"
   }
 }
