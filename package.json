@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-dt-insight-test",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "an eslint shareable config for dt-insight",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/liuxy0551/eslint-config-dt-insight-test",
   "author": "",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/eslint-parser": "^7.17.0",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
