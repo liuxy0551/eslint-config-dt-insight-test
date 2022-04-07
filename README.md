@@ -1,12 +1,12 @@
 # [eslint-config-dt-insight-test]([homepage-url]) [![CI][ci-image]][ci-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
 
-[ci-image]: https://github.com/DTStack/eslint-config-dt-insight-test/actions/workflows/ci.yml/badge.svg?branch=master
-[ci-url]: https://github.com/DTStack/eslint-config-dt-insight-test/actions/workflows/ci.yml
+[ci-image]: https://github.com/liuxy0551/eslint-config-dt-insight-test/actions/workflows/CI.yml/badge.svg?branch=master
+[ci-url]: https://github.com/liuxy0551/eslint-config-dt-insight-test/actions/workflows/CI.yml
 [npm-image]: https://img.shields.io/npm/v/eslint-config-dt-insight-test.svg
 [npm-url]: https://npmjs.org/package/eslint-config-dt-insight-test
 [downloads-image]: https://img.shields.io/npm/dm/eslint-config-dt-insight-test.svg
 [downloads-url]: https://npmjs.org/package/eslint-config-dt-insight-test
-[homepage-url]: https://github.com/DTStack/eslint-config-dt-insight-test
+[homepage-url]: https://github.com/liuxy0551/eslint-config-dt-insight-test
 
 English | [中文](./README_CN.md)
 
@@ -44,7 +44,7 @@ You can add to your `npm test` script or check when save to quickly check your s
 
 ## Learn more
 
-[Code-Style-Guide](https://github.com/DTStack/Code-Style-Guide)
+[Code-Style-Guide](https://github.com/liuxy0551/Code-Style-Guide)
 
 ## License
 
