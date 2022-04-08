@@ -10,19 +10,19 @@ module.exports = {
             jsx: true, // 启用 jsx
             tsx: true, // 启用 tsx
             globalReturn: true, // 允许在全局作用域下使用 return 语句
-            impliedStrict: true // 启用全局 strict mode (如果 ecmaVersion 是 5 或更高)
-        }
+            impliedStrict: true, // 启用全局 strict mode (如果 ecmaVersion 是 5 或更高)
+        },
     },
     settings: {
         react: {
             pragma: 'React',
-            version: '16.6.3'
-        }
+            version: '16.6.3',
+        },
     },
     env: {
         es6: true, // 启用 ES6 语法支持以及新的 ES6 全局变量或类型
         node: true, // Node.js 全局变量和 Node.js 作用域
-        browser: true // 浏览器全局变量
+        browser: true, // 浏览器全局变量
     },
     extends: [
         // "dt-insight",
@@ -30,7 +30,7 @@ module.exports = {
         'eslint:recommended',
         'plugin:react/recommended',
         'plugin:react-hooks/recommended',
-        'plugin:@typescript-eslint/recommended'
+        'plugin:@typescript-eslint/recommended',
     ],
     plugins: ['import', 'react', 'jsx-a11y', 'react-hooks'],
     globals: {
@@ -39,13 +39,17 @@ module.exports = {
         describe: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
-        jest: 'readonly'
+        jest: 'readonly',
     },
-
+    // "off" 或 0 - 关闭规则
+    // "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出)
+    // "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
     rules: {
         semi: 0,
         strict: 0,
-        indent: [2, 4,
+        indent: [
+            2,
+            4,
             {
                 SwitchCase: 1, // 指定 switch-case 语句的缩进级别
                 VariableDeclarator: 1, // 指定 var 变量声明语句的缩进级别
@@ -76,29 +80,40 @@ module.exports = {
                     'JSXClosingFragment',
                     'JSXText',
                     'JSXEmptyExpression',
-                    'JSXSpreadChild'
+                    'JSXSpreadChild',
                 ],
-                offsetTernaryExpressions: true
-            }
+                offsetTernaryExpressions: true,
+            },
         ],
-        'arrow-body-style': 0,
-        'no-return-assign': 0,
-        'no-useless-constructor': 0,
         eqeqeq: 0,
+        'arrow-body-style': 0,
+        'comma-dangle': [2, 'only-multiline'], // 当最后一个元素或属性与结束或属性位于不同的行时，允许但不要求尾随逗号
+        'lines-between-class-members': 0, // 方法间是否空行间隔开
+        'space-before-function-paren': 0, // 方法名和小括号间是否有空格
+
+        'no-return-assign': 0, // return 的代码中有运算
+        'no-useless-constructor': 1, // 空构造函数
         'no-console': 1,
         'no-debugger': 2,
-        'no-param-reassign': 1,
-        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: false }],
+        'no-param-reassign': 1, // 给函数的入参赋值
+        'no-use-before-define': 0, // 使用尚未声明的变量
+
         'import/no-extraneous-dependencies': ['error', { devDependencies: false, optionalDependencies: false, peerDependencies: false }],
+
         'react/display-name': [0],
         'react/sort-comp': 0,
         'react/jsx-uses-react': 1,
         'react/prefer-stateless-function': 0,
         'react/jsx-closing-bracket-location': 0,
-        'jsx-a11y/no-static-element-interactions': 0,
         'react/prop-types': [0, { ignore: ['children'] }],
         'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.js', '.jsx'] }],
         'react/react-in-jsx-scope': 0,
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn',
+
+        'jsx-a11y/no-static-element-interactions': 0,
+
+        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: false }],
         '@typescript-eslint/no-explicit-any': 0,
         '@typescript-eslint/explicit-member-accessibility': 0,
         '@typescript-eslint/explicit-function-return-type': 0,
@@ -106,9 +121,9 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 0,
         '@typescript-eslint/interface-name-prefix': 0,
         '@typescript-eslint/no-empty-interface': 0,
+        '@typescript-eslint/ban-types': 0,
+
         'standard/object-curly-even-spacing': 0,
         'standard/no-callback-literal': 0,
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'warn'
-    }
-}
+    },
+};
