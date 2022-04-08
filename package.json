@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-dt-insight-test",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "an eslint shareable config for dt-insight",
   "main": "index.js",
   "scripts": {
