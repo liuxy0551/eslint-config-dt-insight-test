@@ -82,12 +82,20 @@ module.exports = {
         'arrow-body-style': 0,
         'comma-dangle': [2, 'only-multiline'], // 当最后一个元素或属性与结束或属性位于不同的行时，允许但不要求尾随逗号
         'lines-between-class-members': 0, // 方法间是否空行间隔开
-        'space-before-function-paren': [2, 'never'], // 方法名和小括号间没有空格
+        'space-before-function-paren': [
+            // 函数括号前的空格
+            2,
+            {
+                anonymous: 'always', // 匿名函数表达式，例如 function () {}
+                named: 'never', // 命名函数表达式，例如 function foo () {}
+                asyncArrow: 'always', // 异步箭头函数表达式，例如 async () => {}
+            },
+        ],
         'multiline-ternary': 0, // 三元运算符不强制换行
         'prefer-regex-literals': 0, // 正则的构造函数
+        'prefer-promise-reject-errors': 0, // reject 仅接收 Error 对象
 
         'no-mixed-operators': 0, // 允许混合使用不同的运算符
-        'node/no-callback-literal': 0, // standard 要求 callback 内的值不为具体值
         'no-return-assign': 0, // return 的代码中有运算
         'no-useless-constructor': 0, // 空构造函数
         'no-console': 1,
@@ -106,7 +114,7 @@ module.exports = {
         'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.js', '.jsx'] }],
         'react/react-in-jsx-scope': 0,
         'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'warn',
+        'react-hooks/exhaustive-deps': 1,
 
         'jsx-a11y/no-static-element-interactions': 0,
 
@@ -119,8 +127,19 @@ module.exports = {
         '@typescript-eslint/interface-name-prefix': 0,
         '@typescript-eslint/no-empty-interface': 0,
         '@typescript-eslint/ban-types': 0,
+        '@typescript-eslint/no-empty-function': 0, // 允许函数内容为空
+        '@typescript-eslint/no-this-alias': [
+            // 允许 this 别名
+            2,
+            {
+                allowDestructuring: false, // 不允许从 this 中解构，默认值 true
+                allowedNames: ['self', '_this', 'that'], // 允许别名，默认值 []
+            },
+        ],
 
         'standard/object-curly-even-spacing': 0,
         'standard/no-callback-literal': 0,
+
+        'node/no-callback-literal': 0, // standard 要求 callback 内的值不为具体值
     },
 };
