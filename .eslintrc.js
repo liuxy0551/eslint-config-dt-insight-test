@@ -24,14 +24,7 @@ module.exports = {
         node: true, // Node.js 全局变量和 Node.js 作用域
         browser: true, // 浏览器全局变量
     },
-    extends: [
-        // "dt-insight",
-        'standard',
-        'eslint:recommended',
-        'plugin:react/recommended',
-        'plugin:react-hooks/recommended',
-        'plugin:@typescript-eslint/recommended',
-    ],
+    extends: ['standard', 'eslint:recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:@typescript-eslint/recommended'],
     plugins: ['import', 'react', 'jsx-a11y', 'react-hooks'],
     globals: {
         expect: 'readonly',
@@ -89,13 +82,17 @@ module.exports = {
         'arrow-body-style': 0,
         'comma-dangle': [2, 'only-multiline'], // 当最后一个元素或属性与结束或属性位于不同的行时，允许但不要求尾随逗号
         'lines-between-class-members': 0, // 方法间是否空行间隔开
-        'space-before-function-paren': 0, // 方法名和小括号间是否有空格
+        'space-before-function-paren': [2, 'never'], // 方法名和小括号间没有空格
+        'multiline-ternary': 0, // 三元运算符不强制换行
+        'prefer-regex-literals': 0, // 正则的构造函数
 
+        'no-mixed-operators': 0, // 允许混合使用不同的运算符
+        'node/no-callback-literal': 0, // standard 要求 callback 内的值不为具体值
         'no-return-assign': 0, // return 的代码中有运算
-        'no-useless-constructor': 1, // 空构造函数
+        'no-useless-constructor': 0, // 空构造函数
         'no-console': 1,
         'no-debugger': 2,
-        'no-param-reassign': 1, // 给函数的入参赋值
+        'no-param-reassign': 2, // 给函数的入参赋值
         'no-use-before-define': 0, // 使用尚未声明的变量
 
         'import/no-extraneous-dependencies': ['error', { devDependencies: false, optionalDependencies: false, peerDependencies: false }],

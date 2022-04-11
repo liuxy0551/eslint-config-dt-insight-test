@@ -3,7 +3,7 @@ const { ESLint } = require('eslint')
 // eslint-disable-next-line import/no-extraneous-dependencies
 const test = require('tape')
 
-test('load config in eslint to validate all rule syntax is correct', async function (t) {
+test('load config in eslint to validate all rule syntax is correct', async function(t) {
     const eslint = new ESLint()
     const code = 'const foo = 1\nconst bar = (val) => val + 1\nbar(foo)\n'
     const [lintResult] = await eslint.lintText(code)
@@ -11,7 +11,7 @@ test('load config in eslint to validate all rule syntax is correct', async funct
     t.end()
 })
 
-test('ensure we allow top level await', async function (t) {
+test('ensure we allow top level await', async function(t) {
     const eslint = new ESLint()
     const code = 'const foo = await 1\nconst bar = (val) => val + 2\nawait bar(foo)\n'
     const [lintResult] = await eslint.lintText(code)
