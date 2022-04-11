@@ -1,15 +1,15 @@
-const config = require('../')
-// eslint-disable-next-line import/no-extraneous-dependencies
-const test = require('tape')
+/* eslint-disable import/no-extraneous-dependencies */
+const config = require('../');
+const test = require('tape');
 
-test('test basic properties of config', function(t) {
-    t.ok(isObject(config.parserOptions))
-    t.ok(isObject(config.env))
-    t.ok(isObject(config.globals))
-    t.ok(isObject(config.rules))
-    t.end()
-})
+test('test basic properties of config', function (t) {
+    t.ok(isObject(config.parserOptions));
+    t.ok(isObject(config.env));
+    t.ok(isObject(config.globals));
+    t.ok(isObject(config.rules));
+    t.end();
+});
 
 function isObject(obj) {
-    return typeof obj === 'object' && obj !== null
+    return typeof obj === 'object' && obj !== null;
 }
