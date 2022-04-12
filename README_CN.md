@@ -9,8 +9,7 @@
 [homepage-url]: https://github.com/liuxy0551/eslint-config-dt-insight-test
 
 <p align="center">
-  <a href="./README_CN.md">简体中文 (Simplified Chinese)</a> | 
-  <a href="./README.md">English</a> 
+  简体中文 | <a href="./README.md">English</a> 
 </p>
 
 ## 袋鼠云数栈前端的 Code Style Guide
