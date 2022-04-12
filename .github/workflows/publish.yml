@@ -37,14 +37,13 @@ jobs:
       - name: install dependencies
         run: npm install
 
-      - name: version
-        run: npx standard-version
-        
       - name: set git config
         run: |
           git config user.name "liuxy0551"
           git config user.email "liuxy0551@qq.com"
-          git push --follow-tags origin master
+
+      - name: version
+        run: npx standard-version
 
       - name: git push
         run: git push --follow-tags origin master
