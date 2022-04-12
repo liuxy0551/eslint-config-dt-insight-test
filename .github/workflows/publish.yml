@@ -25,7 +25,7 @@ jobs:
         run: npm run test
 
 
-  version-changelog:
+  publish:
     needs: CI
     runs-on: ubuntu-latest
     steps:
@@ -33,6 +33,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 12
+          registry-url: https://registry.npmjs.org/
 
       - name: install dependencies
         run: npm install
@@ -43,26 +44,12 @@ jobs:
           git config user.email "liuxy0551@qq.com"
 
       - name: version
-        run: npx standard-version && cat package.json
-
-      - name: git push
-        run: git push --follow-tags origin master
-
-
-  publish-to-npm:
-    needs: version-changelog
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-
-      - name: install dependencies
-        run: npm install && cat package.json
+        run: npx standard-version
         
       - name: publish packages
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: git push
+        run: git push --follow-tags origin master
