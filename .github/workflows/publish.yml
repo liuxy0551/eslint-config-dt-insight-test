@@ -38,7 +38,7 @@ jobs:
         run: npm install
 
       - name: version
-        run: standard-version
+        run: npx standard-version
         
       - name: set git config
         run: |
@@ -52,7 +52,6 @@ jobs:
 
   publish-to-npm:
     needs: version-changelog
-    # needs: [CI, version-changelog]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
