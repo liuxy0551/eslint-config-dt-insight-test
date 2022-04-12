@@ -28,7 +28,6 @@ No hesitation. No more maintenance `.eslintrc`. Give it a try right now!
 ## Detailed rules
 - **four spaces are required** – indent
 - **single quotation marks are required for string** – except where escape is need
-- **parentheses are required for arrow function parameters** – parentheses are also required for one parameter
 - **require keyword followed by space** - ` if (condition) {...}`
 - **requires no spaces after the function name** - ` function name (arg) {...}` except anonymous functions and async ` function (arg) {...} `` async () { ... }`
 - **semicolons are not mandatory**
