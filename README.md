@@ -9,8 +9,7 @@
 [homepage-url]: https://github.com/liuxy0551/eslint-config-dt-insight-test
 
 <p align="center">
-  <a href="./README.md">English</a> | 
-  <a href="./README_CN.md">简体中文 (Simplified Chinese)</a> 
+  English | <a href="./README_CN.md">简体中文 (Simplified Chinese)</a> 
 </p>
 
 ## An eslint shareable config for dt-insight Code Style Guide
