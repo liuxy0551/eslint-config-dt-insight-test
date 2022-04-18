@@ -36,7 +36,11 @@
     "eslint-plugin-promise": "^5.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
-    "eslint-plugin-sort-requires": "^2.1.0"
+    "eslint-plugin-sort-requires": "^2.1.0",
+    "stylelint": "^14.7.1",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.2.0"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^2.2.2",
