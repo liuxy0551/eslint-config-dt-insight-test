@@ -40,7 +40,7 @@ module.exports = {
     rules: {
         semi: 0,
         strict: 0,
-        indent: [
+        indent: [// 缩进
             2,
             4,
             {
@@ -79,7 +79,7 @@ module.exports = {
             },
         ],
         eqeqeq: 0,
-        'arrow-body-style': 0,
+        'arrow-body-style': 0, // 控制箭头函数的语法形式
         'comma-dangle': [2, 'only-multiline'], // 当最后一个元素或属性与结束或属性位于不同的行时，允许但不要求尾随逗号
         'lines-between-class-members': 0, // 方法间是否空行间隔开
         'space-before-function-paren': [
@@ -91,6 +91,7 @@ module.exports = {
                 asyncArrow: 'always', // 异步箭头函数表达式，例如 async () => {}
             },
         ],
+        'dot-notation': 0, // 允许方括号表示法 foo['bar']
         'multiline-ternary': 0, // 三元运算符不强制换行
         'prefer-regex-literals': 0, // 正则的构造函数
         'prefer-promise-reject-errors': 0, // reject 仅接收 Error 对象
@@ -103,22 +104,30 @@ module.exports = {
         'no-param-reassign': 2, // 给函数的入参赋值
         'no-use-before-define': 0, // 使用尚未声明的变量
 
-        'import/no-extraneous-dependencies': ['error', { devDependencies: false, optionalDependencies: false, peerDependencies: false }],
+        // 控制是否可以使用没有在 package.json 内 dependencies, devDependencies, optionalDependencies, peerDependencies, bundledDependencies 中声明的扩展模块
+        'import/no-extraneous-dependencies': [2, { devDependencies: false, optionalDependencies: false, peerDependencies: false }],
 
         'react/display-name': [0],
-        'react/sort-comp': 0,
-        'react/jsx-uses-react': 1,
-        'react/prefer-stateless-function': 0,
-        'react/jsx-closing-bracket-location': 0,
-        'react/prop-types': [0, { ignore: ['children'] }],
+        /**
+         * 是否强制组件中的方法顺序，顺序如下：
+         * 1、静态方法和属性
+         * 2、生命周期方法：displayName, propTypes, contextTypes, childContextTypes, mixins, statics, defaultProps, constructor, getDefaultProps, state, getInitialState, getChildContext, getDerivedStateFromProps, componentWillMount, UNSAFE_componentWillMount, componentDidMount, componentWillReceiveProps, UNSAFE_componentWillReceiveProps, shouldComponentUpdate, componentWillUpdate, UNSAFE_componentWillUpdate, getSnapshotBeforeUpdate, componentDidUpdate, componentDidCatch, componentWillUnmount（按此顺序）。
+         * 3、自定义方法
+         * 4、render方法
+         */
+        'react/sort-comp': 1,
+        'react/jsx-uses-react': 1, // 防止 require('react') 被 JSX 语法错误的标记为未使用
+        'react/prefer-stateless-function': 0, // 是否强制将无状态的 React 组件编写为纯函数
+        'react/jsx-closing-bracket-location': 0, // 验证 JSX 中右括号的位置是否与开始标签对齐
+        'react/prop-types': [0, { ignore: ['children'] }], // 验证 React 组件中是否缺少 Props 属性
         'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.js', '.jsx'] }],
         'react/react-in-jsx-scope': 0,
-        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/rules-of-hooks': 2,
         'react-hooks/exhaustive-deps': 1,
 
         'jsx-a11y/no-static-element-interactions': 0,
 
-        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: false }],
+        '@typescript-eslint/no-unused-vars': [2, { vars: 'all', args: 'none', ignoreRestSiblings: false }],
         '@typescript-eslint/no-explicit-any': 0,
         '@typescript-eslint/explicit-member-accessibility': 0,
         '@typescript-eslint/explicit-function-return-type': 0,
