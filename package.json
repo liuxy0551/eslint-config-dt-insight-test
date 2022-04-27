@@ -37,6 +37,7 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-sort-requires": "^2.1.0",
+    "postcss-scss": "^4.0.3",
     "stylelint": "^14.7.1",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-order": "^5.0.0",
