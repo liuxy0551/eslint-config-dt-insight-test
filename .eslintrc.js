@@ -123,7 +123,7 @@ module.exports = {
         'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.js', '.jsx'] }],
         'react/react-in-jsx-scope': 0,
         'react-hooks/rules-of-hooks': 2,
-        'react-hooks/exhaustive-deps': 1,
+        'react-hooks/exhaustive-deps': 0,
 
         'jsx-a11y/no-static-element-interactions': 0,
 
