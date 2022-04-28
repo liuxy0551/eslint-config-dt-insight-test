@@ -44,8 +44,11 @@ jobs:
           git config user.email "liuxy0551@qq.com"
 
       - name: version
-        run: npx standard-version
-        
+        # run: npx standard-version
+        run: |
+          npx standard-version
+          cat CHANGELOG.md
+
       - name: publish packages
         run: npm publish
         env:
