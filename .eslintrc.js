@@ -107,7 +107,6 @@ module.exports = {
         // 控制是否可以使用没有在 package.json 内 dependencies, devDependencies, optionalDependencies, peerDependencies, bundledDependencies 中声明的扩展模块
         'import/no-extraneous-dependencies': [2, { devDependencies: false, optionalDependencies: false, peerDependencies: false }],
 
-        'react/display-name': [0],
         /**
          * 是否强制组件中的方法顺序，顺序如下：
          * 1、静态方法和属性
@@ -116,6 +115,7 @@ module.exports = {
          * 4、render方法
          */
         'react/sort-comp': 1,
+        'react/display-name': [0],
         'react/jsx-uses-react': 1, // 防止 require('react') 被 JSX 语法错误的标记为未使用
         'react/prefer-stateless-function': 0, // 是否强制将无状态的 React 组件编写为纯函数
         'react/jsx-closing-bracket-location': 0, // 验证 JSX 中右括号的位置是否与开始标签对齐
